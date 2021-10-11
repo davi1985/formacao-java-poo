@@ -1,0 +1,44 @@
+package com.algaworks.algalog.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.algaworks.algalog.domain.model.Client;
+import com.algaworks.algalog.domain.repository.ClientRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@RestController
+public class ClientController {
+
+	private ClientRepository clientRepository;
+
+	@GetMapping("/clientes")
+	public List<Client> list() {
+		return clientRepository.findAll();
+	}
+
+	@GetMapping("/clientes/{clientId}")
+	public ResponseEntity<Client> getById(@PathVariable Long clientId) {
+		return clientRepository.findById(clientId).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
+
+		// Second implementation
+//		return clientRepository.findById(clientId).map(client -> ResponseEntity.ok(client))
+//				.orElse(ResponseEntity.notFound().build());
+
+		// Firt implementation
+//		Optional<Client> client =  clientRepository.findById(clientId);
+
+//		if(client.isPresent()) {
+//			return ResponseEntity.ok(client.get());
+//		}
+//		
+//		return ResponseEntity.notFound().build();
+	}
+}

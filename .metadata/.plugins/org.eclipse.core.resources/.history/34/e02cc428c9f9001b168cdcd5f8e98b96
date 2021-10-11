@@ -1,0 +1,10 @@
+package br.com.alura.tdd;
+
+public class CalcTest {
+	
+	public void shouldSumTwoPositiveNumber() {
+		Calc calc = new Calc();
+		
+		int sum = calc.sum(3, 7);
+	}
+}

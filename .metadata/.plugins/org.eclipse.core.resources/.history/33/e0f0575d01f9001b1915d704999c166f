@@ -1,0 +1,21 @@
+package com.algaworks.lists;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Example1 {
+	
+	public static void main(String[] args) {
+		
+		List<String> names = new ArrayList<>();
+		
+		names.add("Davi Silva");
+		names.add("Joelma Braga");
+		names.add("Sarah Emilly");
+		
+		for (String string : names) {
+			System.out.println(string);
+		}
+	}
+
+}

@@ -1,0 +1,32 @@
+package br.com.alura.tdd.service;
+
+import java.math.BigDecimal;
+
+public enum Performance {
+
+	NOT_GOOD_ENOUGH {
+		@Override
+		public BigDecimal percentReadjustment() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	},
+
+	GOOD {
+		@Override
+		public BigDecimal percentReadjustment() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	},
+	EXCELLENT {
+		@Override
+		public BigDecimal percentReadjustment() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	};
+
+	public abstract BigDecimal percentReadjustment();
+
+}

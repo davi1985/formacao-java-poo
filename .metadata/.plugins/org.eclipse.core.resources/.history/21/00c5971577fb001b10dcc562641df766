@@ -1,0 +1,16 @@
+package com.algaworks.algalog.domain.model;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public class Delivery {
+	
+	private Long id;
+	private Client client;
+	private Receiver receiver;
+	private BigDecimal amount;
+	private StatusDelivery status;
+	private LocalDateTime createdAt;
+	private LocalDateTime completion;
+
+}

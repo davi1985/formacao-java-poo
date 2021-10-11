@@ -1,0 +1,12 @@
+package br.com.alura.tdd.service;
+
+import br.com.alura.tdd.modelo.Funcionario;
+
+public class ReadjustmentService {
+
+	public void giveReadjustment(Funcionario funcionario, Performance performance) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package br.com.alura.tdd;
+
+import org.junit.jupiter.api.Test;
+
+public class CalcTest {
+	
+	@Test
+	public void shouldSumTwoPositiveNumber() {
+		Calc calc = new Calc();
+		
+		int sum = calc.sum(3, 7);
+	}
+}

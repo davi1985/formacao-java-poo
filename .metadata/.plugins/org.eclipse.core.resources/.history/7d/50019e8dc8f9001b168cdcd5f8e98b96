@@ -1,0 +1,16 @@
+package br.com.alura.main;
+
+import br.com.alura.tdd.Calc;
+
+public class Main01 {
+
+	public static void main(String[] args) {
+		Calc calc = new Calc();
+		
+		int result = calc.sum(3, 5);
+		
+		System.out.println(result);
+
+	}
+
+}

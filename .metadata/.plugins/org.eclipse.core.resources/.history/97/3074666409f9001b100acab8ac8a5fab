@@ -1,0 +1,13 @@
+package com.algaworks.streams;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FilterForeEachExample {
+
+	public static void main(String[] args) {
+		List<Product> poducts = new ArrayList<>();
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.algaworks.algalog.domain.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.algaworks.algalog.domain.model.Client;
+
+@Repository
+public interface ClientRepository extends JpaRepository<Client, Long> {
+
+}

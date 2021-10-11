@@ -1,0 +1,17 @@
+package com.algaworks.streams;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.algaworks.streams.model.Product;
+
+public class AnyMatchExample {
+
+	public static void main(String[] args) {
+		List<Product> products = new ArrayList<>();
+		
+		
+
+	}
+
+}

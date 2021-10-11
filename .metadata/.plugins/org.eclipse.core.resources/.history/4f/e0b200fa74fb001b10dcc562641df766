@@ -1,0 +1,8 @@
+package com.algaworks.algalog.domain.model;
+
+public class Delivery {
+	
+	private Long id;
+	private Client client;
+
+}

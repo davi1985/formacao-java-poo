@@ -1,0 +1,10 @@
+package com.algaworks.algalog.api.exceptionhandler;
+
+import java.time.LocalDateTime;
+
+public class Issues {
+
+	private Integer status;
+	private LocalDateTime dateTime;
+	private String title;
+}

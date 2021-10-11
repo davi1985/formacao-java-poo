@@ -1,0 +1,14 @@
+package com.algaworks.algalog.domain.service;
+
+import org.springframework.stereotype.Service;
+
+import com.algaworks.algalog.domain.repository.ClientRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class CatalogClientService {
+
+	private ClientRepository clientRepository
+}

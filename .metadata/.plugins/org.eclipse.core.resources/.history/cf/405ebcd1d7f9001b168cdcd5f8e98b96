@@ -1,0 +1,30 @@
+package br.com.alura.tdd.service;
+
+import java.math.BigDecimal;
+
+import br.com.alura.tdd.modelo.Funcionario;
+
+public class ReadjustmentService {
+
+	public void giveReadjustment(Funcionario funcionario, Performance performance) {
+		if(performance == Performance.NOT_GOOD_ENOUGH) {
+			 BigDecimal bonus = funcionario.getSalario().multiply(new BigDecimal("0.03"));
+			 
+			 funcionario.readjustment(bonus);
+		}
+		
+		if(performance == Performance.GOOD) {
+			 BigDecimal bonus = funcionario.getSalario().multiply(new BigDecimal("0.1"));
+			 
+			 funcionario.readjustment(bonus);
+		}
+		
+		if(performance == Performance.EXCELLENT) {
+			 BigDecimal bonus = funcionario.getSalario().multiply(new BigDecimal("0.15"));
+			 
+			 funcionario.readjustment(bonus);
+		}
+		
+	}
+
+}

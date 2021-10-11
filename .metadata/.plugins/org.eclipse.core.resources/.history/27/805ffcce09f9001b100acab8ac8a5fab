@@ -1,0 +1,5 @@
+package com.algaworks.streams.model;
+
+public class Product {
+
+}

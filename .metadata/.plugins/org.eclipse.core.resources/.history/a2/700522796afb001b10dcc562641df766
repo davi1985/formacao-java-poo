@@ -1,0 +1,36 @@
+package com.algaworks.algalog.domain.service;
+
+import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.algaworks.algalog.domain.exception.DomainException;
+import com.algaworks.algalog.domain.model.Client;
+import com.algaworks.algalog.domain.repository.ClientRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class CatalogClientService {
+
+	private ClientRepository clientRepository;
+
+	@Transactional
+	public Client save(Client client) {
+		boolean hasEmail = clientRepository.findByEmail(client.getEmail()).stream()
+				.anyMatch(hasClient -> !hasClient.equals(client));
+
+		if (hasEmail) {
+			throw new DomainException("Já existe um cliente cadastrado com este e-mail.");
+		}
+
+		return clientRepository.save(client);
+	}
+
+	@Transactional
+	public void delete(Long clientId) {
+		clientRepository.deleteById(clientId);
+	}
+}

@@ -1,0 +1,10 @@
+package com.algaworks.streams.model;
+
+public class Product {
+
+	public void inactivate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

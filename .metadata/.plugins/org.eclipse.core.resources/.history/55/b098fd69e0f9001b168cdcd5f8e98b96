@@ -1,0 +1,50 @@
+package br.com.alura.tdd.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+
+import org.junit.jupiter.api.Test;
+
+import br.com.alura.tdd.modelo.Funcionario;
+
+class ReadjustmentServiceTest {
+
+	private ReadjustmentService service;
+	private Funcionario funcionario;
+
+	public void init() {
+		service = new ReadjustmentService();
+		funcionario = new Funcionario("Davi", LocalDate.now(), new BigDecimal("1000.00"));
+	}
+
+	@Test
+	void readjustmentShouldBeThreePerCentWhenPerfomaceIsNotGoodEnough() {
+
+		service.giveReadjustment(funcionario, Performance.NOT_GOOD_ENOUGH);
+
+		assertEquals(new BigDecimal("1030.00"), funcionario.getSalario());
+	}
+
+	@Test
+	void readjustmentShouldBeThreePerCentWhenPerfomaceIsGood() {
+		ReadjustmentService service = new ReadjustmentService();
+		Funcionario funcionario = new Funcionario("Davi", LocalDate.now(), new BigDecimal("1000.00"));
+
+		service.giveReadjustment(funcionario, Performance.GOOD);
+
+		assertEquals(new BigDecimal("1100.00"), funcionario.getSalario());
+	}
+
+	@Test
+	void readjustmentShouldBeThreePerCentWhenPerfomaceIsExcellent() {
+		ReadjustmentService service = new ReadjustmentService();
+		Funcionario funcionario = new Funcionario("Davi", LocalDate.now(), new BigDecimal("1000.00"));
+
+		service.giveReadjustment(funcionario, Performance.EXCELLENT);
+
+		assertEquals(new BigDecimal("1200.00"), funcionario.getSalario());
+	}
+
+}

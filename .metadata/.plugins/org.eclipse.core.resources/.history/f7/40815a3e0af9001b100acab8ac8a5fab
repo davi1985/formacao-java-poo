@@ -1,0 +1,13 @@
+package com.algaworks.streams.model;
+
+public class Product {
+	public enum Status {
+		ACTIVE, INACTIVE
+	}
+
+	public void inactivate() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
